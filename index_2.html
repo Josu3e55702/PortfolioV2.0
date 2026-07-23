@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Josue Hernandez — SOC Analyst & Web Developer</title>
+<meta name="description" content="SOC Analyst Junior y Desarrollador Web Junior. Técnico en Ciberseguridad con 10 certificaciones Cisco. Escazú, Costa Rica."/>
+<meta name="author" content="Josue Hernandez"/>
+<link rel="icon" href="1.png"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Josue Hernandez — SOC Analyst & Web Developer"/>
+<meta property="og:description" content="SOC Analyst Junior y Desarrollador Web Junior. Técnico en Ciberseguridad con 10 certificaciones Cisco."/>
+<meta property="og:image" content="https://josu3e55702.github.io/1.png"/>
+<meta property="og:url" content="https://josu3e55702.github.io/PortfolioV2/"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"/>
+<style>
+  .cv-section{display:flex;flex-direction:column;align-items:center;gap:2rem;margin-top:2rem;}
+  .cv-preview{width:100%;max-width:600px;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.1);box-shadow:0 20px 60px rgba(0,0,0,0.4);}
+  .cv-preview img{width:100%;height:auto;display:block;}
+  .cv-download{display:inline-flex;align-items:center;gap:0.5rem;padding:1rem 1.8rem;background:var(--ivory);color:var(--ink);border-radius:40px;font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--ivory);text-decoration:none;transition:all .4s;}
+  .cv-download:hover{background:var(--accent);border-color:var(--accent);}
+  .works-header{margin-bottom:2.5rem;}
+  .works-header h2{font-family:var(--serif);font-weight:300;font-size:clamp(2rem,5vw,3.5rem);letter-spacing:-0.02em;margin-bottom:0.75rem;}
+  .works-github-link{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;color:rgba(237,237,234,0.52);}
+  .works-github-link a{color:var(--accent);text-decoration:underline;text-underline-offset:3px;}
+  .skill-badges{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem;}
+  .skill-badge{font-family:var(--mono);font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);border:1px solid var(--faint);border-radius:30px;padding:.35rem .7rem;}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<div id="cur"></div><div id="ring"></div>
+<div id="prog"></div>
+
+<header>
+  <div class="brand">
+    <b data-i18n="brandTitle">Portfolio de Josue Hernandez</b><small data-i18n="brandSubtitle">SOC Analyst & Web Dev</small>
+  </div>
+  <nav class="main" id="nav">
+    <a href="#about" data-i18n="navAbout">Sobre mí</a>
+    <a href="#certs" data-i18n="navCerts">Certificaciones</a>
+    <a href="#works" data-i18n="navWorks">Proyectos</a>
+    <a href="#cv" data-i18n="navCv">CV</a>
+    <a href="#contact" data-i18n="navContact">Contacto</a>
+  </nav>
+  <div class="head-right">
+    <div class="clock"><span>CR <i id="ckCR">--:--:--</i></span><span>TÚ</span> <i id="ckYou">--:--:--</i></div>
+    <div class="lang-switcher">
+      <button class="lang-toggle" id="langToggle" type="button" aria-label="Seleccionar idioma">🌐 ES</button>
+      <div class="lang-menu" id="langMenu" role="menu">
+        <button class="lang-option active" type="button" data-lang="es">Español</button>
+        <button class="lang-option" type="button" data-lang="en">English</button>
+        <button class="lang-option" type="button" data-lang="ja">日本語</button>
+      </div>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg">
+    <div class="hero-glow"></div>
+    <video class="hero-video" autoplay muted loop playsinline poster="">
+      <source src="background1.mp4" type="video/mp4">
+    </video>
+    <div class="hero-shade"></div>
+  </div>
+  <div class="hero-inner">
+    <div class="eyebrow"><span class="dot"></span><span data-i18n="heroEyebrow">Disponible para trabajo</span></div>
+    <h1 class="hero">
+      <span class="line"><span data-i18n="heroLine1">SOC Junior</span></span>
+      <span class="line"><span data-i18n="heroLine2">Redes</span></span>
+      <span class="line"><span data-i18n="heroLine3">Ciber<em>seguridad</em></span></span>
+    </h1>
+    <div class="hero-lead">
+      <p data-i18n="heroLead">SOC Analyst Junior y Desarrollador Web Junior. Técnico en Ciberseguridad con 10 certificaciones Cisco NetAcad. Bilingüe español — inglés B2.</p>
+      <p class="geo" data-i18n="heroGeo">Costa Rica &rarr; Disponible para trabajo.</p>
+    </div>
+    <div class="hero-actions">
+      <a href="#works" class="pill solid" data-i18n="heroCta">Ver proyectos</a>
+      <span class="pill ghost"><span class="gdot"></span><span data-i18n="heroStatus">Disponible · CR</span></span>
+    </div>
+  </div>
+  <div class="scrollcue"><span>Scroll</span><span class="ln"></span></div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="track" id="mq"></div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="block">
+  <div class="idx"><span data-i18n="aboutIdx">(01) — Sobre mí</span></div>
+  <div class="about-grid">
+    <div class="reveal">
+      <h2 data-i18n-html="aboutTitle">Tecnología desde<br><em>siempre.</em></h2>
+      <p data-i18n="aboutP1">Soy Josué Hernández, 19 años, de Costa Rica. Técnico universitario en Ciberseguridad Junior (U. Castro Carazo ). Apasionado por la tecnología desde pequeño, con especial enfoque en monitoreo SOC y redes.</p>
+      <p data-i18n="aboutP2">También desarrollo web frontend con HTML, CSS y JavaScript. Destaco por pensamiento crítico, trabajo ordenado y gran capacidad de aprendizaje rápido.</p>
+      <div class="skill-badges">
+        <span class="skill-badge" data-i18n="skill1">SOC Monitoring</span>
+        <span class="skill-badge" data-i18n="skill2">Wireshark</span>
+        <span class="skill-badge" data-i18n="skill3">Nmap</span>
+        <span class="skill-badge" data-i18n="skill4">Splunk</span>
+        <span class="skill-badge" data-i18n="skill5">Python</span>
+        <span class="skill-badge" data-i18n="skill6">Linux</span>
+        <span class="skill-badge" data-i18n="skill7">TCP/IP</span>
+        <span class="skill-badge" data-i18n="skill8">DNS</span>
+        <span class="skill-badge" data-i18n="skill9">Cisco NetAcad</span>
+        <span class="skill-badge" data-i18n="skill10">HTML/CSS/JS</span>
+      </div>
+    </div>
+    <div class="reveal d1">
+      <div class="skills">
+        <div class="lab" data-i18n="skillsLab">Habilidades técnicas</div>
+        <div class="skill"><div class="top"><span data-i18n="skillItem1">Redes y protocolos (Cisco)</span><em>01</em></div><div class="bar"><i data-w="95"></i></div></div>
+        <div class="skill"><div class="top"><span data-i18n="skillItem2">Análisis de logs y SIEM</span><em>02</em></div><div class="bar"><i data-w="78"></i></div></div>
+        <div class="skill"><div class="top"><span data-i18n="skillItem3">Detección de amenazas</span><em>03</em></div><div class="bar"><i data-w="75"></i></div></div>
+        <div class="skill"><div class="top"><span data-i18n="skillItem4">Desarrollo Web Frontend</span><em>04</em></div><div class="bar"><i data-w="80"></i></div></div>
+        <div class="skill"><div class="top"><span data-i18n="skillItem5">Python / Scripting</span><em>05</em></div><div class="bar"><i data-w="65"></i></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certs" class="block">
+  <div class="idx"><span data-i18n="certsIdx">(02) — Certificaciones</span></div>
+
+  <div class="cert-header reveal">
+    <div class="cert-title-block">
+      <h2 data-i18n="certsTitle">Certificaciones</h2>
+      <p data-i18n="certsIntro">Estas son las certificaciones y cursos que respaldan mi formación en ciberseguridad, redes y desarrollo web.</p>
+    </div>
+    <a class="cert-drive-link" href="https://drive.google.com/drive/folders/1GZgQLJ0qDGjc4siwuWV06LDFfGqGMqGy" target="_blank" rel="noopener" data-i18n="certsDrive">
+      Ver todas en Google Drive
+    </a>
+  </div>
+
+  <div class="stats-grid reveal d1">
+    <div class="stat-card">
+      <strong>10</strong>
+      <span data-i18n="certStat1">Certificados</span>
+    </div>
+    <div class="stat-card">
+      <strong data-i18n="certStat2">Técnico</strong>
+      <span>U. Castro Carazo</span>
+    </div>
+    <div class="stat-card">
+      <strong data-i18n="certStat3">SOC</strong>
+      <span>Analyst</span>
+    </div>
+  </div>
+
+  <div class="cert-list">
+    <article class="cert-item reveal d1">
+      <div class="cert-media"><img src="Titulo castro carazo.png" alt="Certificado 01"></div>
+      <div class="cert-body">
+        <span class="num">01</span>
+        <h3 data-i18n="certTitle1">Titulo Tecnico en Ciberseguridad</h3>
+        <p data-i18n="certDesc1">Otorgado por la Universidad Castro Carazo.</p>
+        <div class="work-tags"><span>Cisco</span><span data-i18n="certTag1a">Redes</span><span>NetAcad</span></div>
+        <a class="cert-link" href="https://drive.google.com/drive/folders/1GZgQLJ0qDGjc4siwuWV06LDFfGqGMqGy" target="_blank" rel="noopener" data-i18n="certLink">Ver certificado</a>
+      </div>
+    </article>
+
+    <article class="cert-item reveal d2">
+      <div class="cert-media"><img src="Juniorexamncb.png" alt="Certificado 02"></div>
+      <div class="cert-body">
+        <span class="num">02</span>
+        <h3 data-i18n="certTitle2">Junior Cybersecurity Analyst Career Path Exam</h3>
+        <p data-i18n="certDesc2">Conceptos clave de seguridad, amenazas, riesgos y defensa.</p>
+        <div class="work-tags"><span>Cisco</span><span data-i18n="certTag2a">Seguridad</span><span>NetAcad</span></div>
+        <a class="cert-link" href="https://drive.google.com/drive/folders/1GZgQLJ0qDGjc4siwuWV06LDFfGqGMqGy" target="_blank" rel="noopener" data-i18n="certLink">Ver certificado</a>
+      </div>
+    </article>
+
+    <article class="cert-item reveal d3">
+      <div class="cert-media"><img src="soporteyseguridad.png" alt="Certificado 03"></div>
+      <div class="cert-body">
+        <span class="num">03</span>
+        <h3 data-i18n="certTitle3">Soporte y seguridad de red</h3>
+        <p data-i18n="certDesc3">Visión general de amenazas, protección y buenas prácticas.</p>
+        <div class="work-tags"><span data-i18n="certTag3a">Redes</span><span data-i18n="certTag3b">Seguridad</span><span data-i18n="certTag3c">Fundamentos</span></div>
+        <a class="cert-link" href="https://drive.google.com/drive/folders/1GZgQLJ0qDGjc4siwuWV06LDFfGqGMqGy" target="_blank" rel="noopener" data-i18n="certLink">Ver certificado</a>
+      </div>
+    </article>
+
+    <article class="cert-item reveal d1">
+      <div class="cert-media"><img src="direccionamiento.png" alt="Certificado 04"></div>
+      <div class="cert-body">
+        <span class="num">04</span>
+        <h3 data-i18n="certTitle4">Direccionamiento de red y solucion de problemas basicos.</h3>
+        <p data-i18n="certDesc4">Direccionamiento de red y solucion de problemas basicos.</p>
+        <div class="work-tags"><span>IoT</span><span data-i18n="certTag4a">Redes</span><span data-i18n="certTag4b">Curso</span></div>
+        <a class="cert-link" href="https://drive.google.com/drive/folders/1GZgQLJ0qDGjc4siwuWV06LDFfGqGMqGy" target="_blank" rel="noopener" data-i18n="certLink">Ver certificado</a>
+      </div>
+    </article>
+
+    <article class="cert-item reveal d2">
+      <div class="cert-media"><img src="defensared.png" alt="Certificado 05"></div>
+      <div class="cert-body">
+        <span class="num">05</span>
+        <h3 data-i18n="certTitle5">Defensa de la red</h3>
+        <p data-i18n="certDesc5">Prácticas de laboratorio con simulación de redes.</p>
+        <div class="work-tags"><span>Packet Tracer</span><span data-i18n="certTag5a">Laboratorio</span><span data-i18n="certTag5b">Redes</span></div>
+        <a class="cert-link" href="https://drive.google.com/drive/folders/1GZgQLJ0qDGjc4siwuWV06LDFfGqGMqGy" target="_blank" rel="noopener" data-i18n="certLink">Ver certificado</a>
+      </div>
+    </article>
+
+    <article class="cert-item reveal d3">
+      <div class="cert-media"><img src="introduction.png" alt="Certificado 06"></div>
+      <div class="cert-body">
+        <span class="num">06</span>
+        <h3 data-i18n="certTitle6">Introduction to cybersecurity</h3>
+        <p data-i18n="certDesc6">Certificación introductoria en fundamentos de ciberseguridad.</p>
+        <div class="work-tags"><span>Linux</span><span data-i18n="certTag6a">Sistemas</span><span>CLI</span></div>
+        <a class="cert-link" href="https://drive.google.com/drive/folders/1GZgQLJ0qDGjc4siwuWV06LDFfGqGMqGy" target="_blank" rel="noopener" data-i18n="certLink">Ver certificado</a>
+      </div>
+    </article>
+
+    <article class="cert-item reveal d1">
+      <div class="cert-media"><img src="Puntosfinales.png" alt="Certificado 07"></div>
+      <div class="cert-body">
+        <span class="num">07</span>
+        <h3 data-i18n="certTitle7">Seguridad de puntos finales</h3>
+        <p data-i18n="certDesc7">Protección de dispositivos y entornos de usuario.</p>
+        <div class="work-tags"><span>Python</span><span data-i18n="certTag7a">Automatización</span><span data-i18n="certTag7b">Scripting</span></div>
+        <a class="cert-link" href="https://drive.google.com/drive/folders/1GZgQLJ0qDGjc4siwuWV06LDFfGqGMqGy" target="_blank" rel="noopener" data-i18n="certLink">Ver certificado</a>
+      </div>
+    </article>
+
+    <article class="cert-item reveal d2">
+      <div class="cert-media"><img src="ciberneticas.png" alt="Certificado 08"></div>
+      <div class="cert-body">
+        <span class="num">08</span>
+        <h3 data-i18n="certTitle8">Gestión de amenazas cibernéticas</h3>
+        <p data-i18n="certDesc8">Comprensión de amenazas, análisis y respuesta.</p>
+        <div class="work-tags"><span>VirusTotal</span><span>Nmap</span><span>SOC</span></div>
+        <a class="cert-link" href="https://drive.google.com/drive/folders/1GZgQLJ0qDGjc4siwuWV06LDFfGqGMqGy" target="_blank" rel="noopener" data-i18n="certLink">Ver certificado</a>
+      </div>
+    </article>
+
+    <article class="cert-item reveal d3">
+      <div class="cert-media"><img src="basico.png" alt="Certificado 09"></div>
+      <div class="cert-body">
+        <span class="num">09</span>
+        <h3 data-i18n="certTitle9">Concepto básico de redes</h3>
+        <p data-i18n="certDesc9">Fundamentos de comunicación de red y protocolos.</p>
+        <div class="work-tags"><span>Wireshark</span><span data-i18n="certTag9a">Monitoreo</span><span data-i18n="certTag9b">Analítica</span></div>
+        <a class="cert-link" href="https://drive.google.com/drive/folders/1GZgQLJ0qDGjc4siwuWV06LDFfGqGMqGy" target="_blank" rel="noopener" data-i18n="certLink">Ver certificado</a>
+      </div>
+    </article>
+
+    <article class="cert-item reveal d1">
+      <div class="cert-media"><img src="dispositivos.png" alt="Certificado 10"></div>
+      <div class="cert-body">
+        <span class="num">10</span>
+        <h3 data-i18n="certTitle10">Dispositivos de red y configuración inicial</h3>
+        <p data-i18n="certDesc10">Configuración básica, acceso y administración inicial.</p>
+        <div class="work-tags"><span>SOC</span><span data-i18n="certTag10a">Detección</span><span data-i18n="certTag10b">Respuesta</span></div>
+        <a class="cert-link" href="https://drive.google.com/drive/folders/1GZgQLJ0qDGjc4siwuWV06LDFfGqGMqGy" target="_blank" rel="noopener" data-i18n="certLink">Ver certificado</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- WORKS -->
+<section id="works" class="block">
+  <div class="idx"><span data-i18n="worksIdx">(03) — Proyectos</span></div>
+
+  <div class="works-header reveal">
+    <h2 data-i18n="worksTitle">PROYECTOS</h2>
+    <p class="works-github-link"><span data-i18n="worksIntro">Podés ver todos los proyectos en GitHub</span> &rarr; <a href="https://github.com/Josu3e55702" target="_blank" rel="noopener">github.com/Josu3e55702</a></p>
+  </div>
+
+  <a href="https://github.com/Josu3e55702/soc-log-analyzer" target="_blank" rel="noopener" class="work">
+    <div class="work-media"><span class="num">01</span><img src="" alt="SOC Log Analyzer"></div>
+    <div class="work-body">
+      <h3>SOC Log Analyzer</h3>
+      <p data-i18n="work1Desc">Script Python que analiza logs de Linux y detecta ataques de fuerza bruta SSH automáticamente. Genera reporte con IPs sospechosas y recomendaciones de acción.</p>
+      <div class="work-tags"><span>Python</span><span>Linux</span><span>SSH Logs</span><span>SOC</span></div>
+      <span class="viewlink"><span data-i18n="viewProject">Ver proyecto</span> &rarr;</span>
+    </div>
+  </a>
+
+  <a href="https://github.com/Josu3e55702/analisis-trafico-wireshark" target="_blank" rel="noopener" class="work soon">
+    <div class="work-media"><span class="num">02</span><span class="badge"></span><img src="" alt="Trafic Web Analyzer With Wireshark"></div>
+    <div class="work-body">
+      <h3>Trafic Web Analyzer With Wireshark</h3>
+      <p data-i18n="work2Desc">Analyzer de tráfico web utilizando Wireshark para inspeccionar paquetes y detectar anomalías en la red.</p>
+      <div class="work-tags"><span>Wireshark</span><span>Test Scanning</span><span>VirtualBox</span><span>Linux</span></div>
+      <span class="viewlink"><span data-i18n="viewProject">Ver proyecto</span> &rarr;</span>
+    </div>
+  </a>
+
+  <a href="https://github.com/Josu3e55702" target="_blank" rel="noopener" class="work soon">
+    <div class="work-media"><span class="num">03</span><span class="badge" data-i18n="badgeInDev">En desarrollo</span><img src="" alt="Incident Report"></div>
+    <div class="work-body">
+      <h3 data-i18n="work3Title">Reporte de Incidente — MITRE ATT&amp;CK</h3>
+      <p data-i18n="work3Desc">Investigación completa de incidente real simulado en Blue Team Labs Online. Cada táctica del atacante mapeada al framework MITRE ATT&amp;CK.</p>
+      <div class="work-tags"><span>MITRE ATT&amp;CK</span><span>Wireshark</span><span>Forense</span><span>SOC</span></div>
+      <span class="viewlink"><span data-i18n="viewProject">Ver proyecto</span> &rarr;</span>
+    </div>
+  </a>
+
+  <a href="https://github.com/Josu3e55702" target="_blank" rel="noopener" class="work soon">
+    <div class="work-media"><span class="num">04</span><span class="badge" data-i18n="badgeInDev">En desarrollo</span><img src="" alt="Splunk Detection"></div>
+    <div class="work-body">
+      <h3 data-i18n="work4Title">Reglas de Detección — Splunk</h3>
+      <p data-i18n="work4Desc">Reglas SPL en Splunk Free para detectar fuerza bruta, port scanning y DNS tunneling. Documentadas con casos de prueba y resultados.</p>
+      <div class="work-tags"><span>Splunk</span><span>SPL</span><span>Detección</span><span>SOC</span></div>
+      <span class="viewlink"><span data-i18n="viewProject">Ver proyecto</span> &rarr;</span>
+    </div>
+  </a>
+
+  <h2 data-i18n="webDevTitle">Desarrollo Web</h2>
+
+  <a href="https://github.com/Josu3e55702" target="_blank" rel="noopener" class="work">
+    <div class="work-media"><span class="num">05</span><img src="" alt="JC Barber Studio"></div>
+    <div class="work-body">
+      <h3>JC Barber Studio</h3>
+      <p data-i18n="work5Desc">Sitio para una barbería: galería, servicios y reserva directa por WhatsApp.</p>
+      <div class="work-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+      <span class="viewlink"><span data-i18n="viewProject">Ver proyecto</span> &rarr;</span>
+    </div>
+  </a>
+
+  <a href="https://github.com/Josu3e55702" target="_blank" rel="noopener" class="work soon">
+    <div class="work-media"><span class="num">06</span><span class="badge" data-i18n="badgeInDev">En desarrollo</span><img src="" alt="CHKAdventures"></div>
+    <div class="work-body">
+      <h3>CHKAdventures</h3>
+      <p data-i18n="work6Desc">Sitio de turismo de aventura. Diseño moderno con enfoque en experiencia de usuario.</p>
+      <div class="work-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+      <span class="viewlink"><span data-i18n="viewProject">Ver proyecto</span> &rarr;</span>
+    </div>
+  </a>
+</section>
+
+<!-- CV -->
+<section id="cv" class="block">
+  <div class="idx"><span data-i18n="cvIdx">(03) — Currículum</span></div>
+  <div class="cv-section reveal">
+    <div class="cv-preview">
+      <img src="CVimagen.png" alt="CV Josue Hernandez" onerror="this.style.display='none'"/>
+    </div>
+    <a href="CV — Josué Hernández Vega.pdf.pdf" download class="cv-download" data-i18n="cvDownload">&#8595; Descargar CV</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="block">
+  <div class="idx" style="justify-content:center"><span data-i18n="contactIdx">(04) — Contacto</span></div>
+  <h2 class="reveal" style="font-family:var(--serif);font-weight:300;font-size:clamp(3rem,9vw,8rem);line-height:.95;margin-bottom:1.6rem;text-align:center;" data-i18n-html="contactTitle">Siempre listo<br><em>para un reto.</em></h2>
+  <p class="sub reveal d1" data-i18n="contactSub">Siempre listo para un nuevo reto. Hablemos.</p>
+  <div class="reveal d2">
+    <a href="https://www.linkedin.com/in/josu%C3%A9-hern%C3%A1ndez-011b97373/" target="_blank" rel="noopener noreferrer" class="pill solid" data-i18n="contactCta">Contacto por LinkedIn</a>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/josu%C3%A9-hern%C3%A1ndez-011b97373/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:hernandesjosue796@gmail.com" target="_blank" rel="noopener noreferrer">Email (hernandesjosue796@gmail.com)</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>&copy; <span id="yr"></span> Josue Hernandez</span>
+  <span data-i18n="footerLocation">Costa Rica</span>
+</footer>
+
+<script>
+(function(){
+  var currentLang = localStorage.getItem('portfolio-lang') || 'es';
+  var translations = {
+    es: {
+      pageTitle: 'Josue Hernandez — SOC Analyst & Web Developer',
+      metaDescription: 'SOC Analyst Junior y Desarrollador Web Junior. Técnico en Ciberseguridad con 10 certificaciones Cisco. Escazú, Costa Rica.',
+      brandTitle: 'Portfolio de Josue Hernandez',
+      brandSubtitle: 'SOC Analyst & Web Dev',
+      navAbout: 'Sobre mí',
+      navCerts: 'Certificaciones',
+      navWorks: 'Proyectos',
+      navCv: 'CV',
+      navContact: 'Contacto',
+      heroEyebrow: 'Disponible para trabajo',
+      heroLine1: 'SOC Junior',
+      heroLine2: 'Redes',
+      heroLine3: 'Ciberseguridad',
+      heroLead: 'SOC Analyst Junior y Desarrollador Web Junior. Técnico en Ciberseguridad con 10 certificaciones Cisco NetAcad. Bilingüe español — inglés B2.',
+      heroGeo: 'Costa Rica → Disponible para trabajo.',
+      heroCta: 'Ver proyectos',
+      heroStatus: 'Disponible · CR',
+      aboutIdx: '(01) — Sobre mí',
+      aboutTitle: 'Tecnología desde<br><em>siempre.</em>',
+      aboutP1: 'Soy Josué Hernández, 19 años, de Costa Rica. Técnico universitario en Ciberseguridad Junior (U. Castro Carazo). Apasionado por la tecnología desde pequeño, con especial enfoque en monitoreo SOC y redes.',
+      aboutP2: 'También desarrollo web frontend con HTML, CSS y JavaScript. Destaco por pensamiento crítico, trabajo ordenado y gran capacidad de aprendizaje rápido.',
+      skill1: 'SOC Monitoring',
+      skill2: 'Wireshark',
+      skill3: 'Nmap',
+      skill4: 'Splunk',
+      skill5: 'Python',
+      skill6: 'Linux',
+      skill7: 'TCP/IP',
+      skill8: 'DNS',
+      skill9: 'Cisco NetAcad',
+      skill10: 'HTML/CSS/JS',
+      skillsLab: 'Habilidades técnicas',
+      skillItem1: 'Redes y protocolos (Cisco)',
+      skillItem2: 'Análisis de logs y SIEM',
+      skillItem3: 'Detección de amenazas',
+      skillItem4: 'Desarrollo Web Frontend',
+      skillItem5: 'Python / Scripting',
+      certsIdx: '(02) — Certificaciones',
+      certsTitle: 'Certificaciones',
+      certsIntro: 'Estas son las certificaciones y cursos que respaldan mi formación en ciberseguridad, redes y desarrollo web.',
+      certsDrive: 'Ver todas en Google Drive',
+      certStat1: 'Certificados',
+      certStat2: 'Técnico',
+      certStat3: 'SOC',
+      certLink: 'Ver certificado',
+      certTitle1: 'Título Técnico en Ciberseguridad',
+      certDesc1: 'Otorgado por la Universidad Castro Carazo.',
+      certTag1a: 'Redes',
+      certTitle2: 'Junior Cybersecurity Analyst Career Path Exam',
+      certDesc2: 'Conceptos clave de seguridad, amenazas, riesgos y defensa.',
+      certTag2a: 'Seguridad',
+      certTitle3: 'Soporte y seguridad de red',
+      certDesc3: 'Visión general de amenazas, protección y buenas prácticas.',
+      certTag3a: 'Redes',
+      certTag3b: 'Seguridad',
+      certTag3c: 'Fundamentos',
+      certTitle4: 'Direccionamiento de red y solución de problemas básicos',
+      certDesc4: 'Direccionamiento de red y solución de problemas básicos.',
+      certTag4a: 'Redes',
+      certTag4b: 'Curso',
+      certTitle5: 'Defensa de la red',
+      certDesc5: 'Prácticas de laboratorio con simulación de redes.',
+      certTag5a: 'Laboratorio',
+      certTag5b: 'Redes',
+      certTitle6: 'Introduction to Cybersecurity',
+      certDesc6: 'Certificación introductoria en fundamentos de ciberseguridad.',
+      certTag6a: 'Sistemas',
+      certTitle7: 'Seguridad de puntos finales',
+      certDesc7: 'Protección de dispositivos y entornos de usuario.',
+      certTag7a: 'Automatización',
+      certTag7b: 'Scripting',
+      certTitle8: 'Gestión de amenazas cibernéticas',
+      certDesc8: 'Comprensión de amenazas, análisis y respuesta.',
+      certTitle9: 'Conceptos básicos de redes',
+      certDesc9: 'Fundamentos de comunicación de red y protocolos.',
+      certTag9a: 'Monitoreo',
+      certTag9b: 'Analítica',
+      certTitle10: 'Dispositivos de red y configuración inicial',
+      certDesc10: 'Configuración básica, acceso y administración inicial.',
+      certTag10a: 'Detección',
+      certTag10b: 'Respuesta',
+      worksIdx: '(03) — Proyectos',
+      worksTitle: 'PROYECTOS',
+      worksIntro: 'Podés ver todos los proyectos en GitHub',
+      viewProject: 'Ver proyecto',
+      badgeInDev: 'En desarrollo',
+      work1Desc: 'Script Python que analiza logs de Linux y detecta ataques de fuerza bruta SSH automáticamente. Genera reporte con IPs sospechosas y recomendaciones de acción.',
+      work2Desc: 'Analyzer de tráfico web utilizando Wireshark para inspeccionar paquetes y detectar anomalías en la red.',
+      work3Title: 'Reporte de Incidente — MITRE ATT&CK',
+      work3Desc: 'Investigación completa de incidente real simulado en Blue Team Labs Online. Cada táctica del atacante mapeada al framework MITRE ATT&CK.',
+      work4Title: 'Reglas de Detección — Splunk',
+      work4Desc: 'Reglas SPL en Splunk Free para detectar fuerza bruta, port scanning y DNS tunneling. Documentadas con casos de prueba y resultados.',
+      webDevTitle: 'Desarrollo Web',
+      work5Desc: 'Sitio para una barbería: galería, servicios y reserva directa por WhatsApp.',
+      work6Desc: 'Sitio de turismo de aventura. Diseño moderno con enfoque en experiencia de usuario.',
+      cvIdx: '(03) — Currículum',
+      cvDownload: '⬇ Descargar CV',
+      contactIdx: '(04) — Contacto',
+      contactTitle: 'Siempre listo<br><em>para un reto.</em>',
+      contactSub: 'Siempre listo para un nuevo reto. Hablemos.',
+      contactCta: 'Contacto por Email',
+      footerLocation: 'Costa Rica',
+      scrollCue: 'Scroll',
+      marqueeItems: ['SOC Analyst','Ciberseguridad','Análisis de logs','Detección de amenazas','SIEM','Wireshark','Cisco NetAcad','Linux','Python','Splunk','Desarrollo Web','Blue Team','Costa Rica']
+    },
+    en: {
+      pageTitle: 'Josue Hernandez — SOC Analyst & Web Developer',
+      metaDescription: 'Junior SOC Analyst and Junior Web Developer. Cybersecurity technician with 10 Cisco certifications. Escazú, Costa Rica.',
+      brandTitle: 'Josue Hernandez Portfolio',
+      brandSubtitle: 'SOC Analyst & Web Dev',
+      navAbout: 'About',
+      navCerts: 'Certifications',
+      navWorks: 'Projects',
+      navCv: 'Resume',
+      navContact: 'Contact',
+      heroEyebrow: 'Available for work',
+      heroLine1: 'SOC Junior',
+      heroLine2: 'Networks',
+      heroLine3: 'Cybersecurity',
+      heroLead: 'Junior SOC Analyst and Junior Web Developer. Cybersecurity technician with 10 Cisco NetAcad certifications. Bilingual Spanish — English B2.',
+      heroGeo: 'Costa Rica → Available for work.',
+      heroCta: 'View projects',
+      heroStatus: 'Available · CR',
+      aboutIdx: '(01) — About',
+      aboutTitle: 'Technology from<br><em>the beginning.</em>',
+      aboutP1: 'I am Josué Hernández, 19 years old, from Costa Rica. Junior Cybersecurity technician at Universidad Castro Carazo. Passionate about technology since childhood, with a special focus on SOC monitoring and networking.',
+      aboutP2: 'I also develop frontend web projects with HTML, CSS, and JavaScript. I stand out for critical thinking, neat work, and fast learning.',
+      skill1: 'SOC Monitoring',
+      skill2: 'Wireshark',
+      skill3: 'Nmap',
+      skill4: 'Splunk',
+      skill5: 'Python',
+      skill6: 'Linux',
+      skill7: 'TCP/IP',
+      skill8: 'DNS',
+      skill9: 'Cisco NetAcad',
+      skill10: 'HTML/CSS/JS',
+      skillsLab: 'Technical skills',
+      skillItem1: 'Networking and protocols (Cisco)',
+      skillItem2: 'Log analysis and SIEM',
+      skillItem3: 'Threat detection',
+      skillItem4: 'Frontend Web Development',
+      skillItem5: 'Python / Scripting',
+      certsIdx: '(02) — Certifications',
+      certsTitle: 'Certifications',
+      certsIntro: 'These are the certifications and courses that support my training in cybersecurity, networking, and web development.',
+      certsDrive: 'View all on Google Drive',
+      certStat1: 'Certified',
+      certStat2: 'Technical',
+      certStat3: 'SOC',
+      certLink: 'View certificate',
+      certTitle1: 'Technical Title in Cybersecurity',
+      certDesc1: 'Awarded by Universidad Castro Carazo.',
+      certTag1a: 'Networking',
+      certTitle2: 'Junior Cybersecurity Analyst Career Path Exam',
+      certDesc2: 'Core concepts of security, threats, risks, and defense.',
+      certTag2a: 'Security',
+      certTitle3: 'Network support and security',
+      certDesc3: 'Overview of threats, protection, and best practices.',
+      certTag3a: 'Networks',
+      certTag3b: 'Security',
+      certTag3c: 'Fundamentals',
+      certTitle4: 'Network addressing and basic troubleshooting',
+      certDesc4: 'Network addressing and basic troubleshooting.',
+      certTag4a: 'Networks',
+      certTag4b: 'Course',
+      certTitle5: 'Network defense',
+      certDesc5: 'Laboratory practices with network simulation.',
+      certTag5a: 'Lab',
+      certTag5b: 'Networks',
+      certTitle6: 'Introduction to Cybersecurity',
+      certDesc6: 'Introductory certification in cybersecurity fundamentals.',
+      certTag6a: 'Systems',
+      certTitle7: 'Endpoint security',
+      certDesc7: 'Protection of devices and user environments.',
+      certTag7a: 'Automation',
+      certTag7b: 'Scripting',
+      certTitle8: 'Cyber threat management',
+      certDesc8: 'Understanding threats, analysis, and response.',
+      certTitle9: 'Basic networking concepts',
+      certDesc9: 'Fundamentals of network communication and protocols.',
+      certTag9a: 'Monitoring',
+      certTag9b: 'Analytics',
+      certTitle10: 'Network devices and initial configuration',
+      certDesc10: 'Basic setup, access, and initial administration.',
+      certTag10a: 'Detection',
+      certTag10b: 'Response',
+      worksIdx: '(03) — Projects',
+      worksTitle: 'PROJECTS',
+      worksIntro: 'You can see all projects on GitHub',
+      viewProject: 'View project',
+      badgeInDev: 'In development',
+      work1Desc: 'Python script that analyzes Linux logs and automatically detects SSH brute-force attacks. Generates a report with suspicious IPs and recommended actions.',
+      work2Desc: 'Web traffic analyzer using Wireshark to inspect packets and detect network anomalies.',
+      work3Title: 'Incident Report — MITRE ATT&CK',
+      work3Desc: 'Complete investigation of a simulated incident in Blue Team Labs Online. Each attack tactic mapped to the MITRE ATT&CK framework.',
+      work4Title: 'Detection Rules — Splunk',
+      work4Desc: 'SPL rules in Splunk Free to detect brute force, port scanning, and DNS tunneling. Documented with test cases and results.',
+      webDevTitle: 'Web Development',
+      work5Desc: 'Website for a barbershop: gallery, services, and direct WhatsApp booking.',
+      work6Desc: 'Adventure tourism website. Modern design focused on user experience.',
+      cvIdx: '(03) — Resume',
+      cvDownload: '⬇ Download CV',
+      contactIdx: '(04) — Contact',
+      contactTitle: 'Always ready<br><em>for a challenge.</em>',
+      contactSub: 'Always ready for a new challenge. Let’s talk.',
+      contactCta: 'Contact by Email',
+      footerLocation: 'Costa Rica',
+      scrollCue: 'Scroll',
+      marqueeItems: ['SOC Analyst','Cybersecurity','Log analysis','Threat detection','SIEM','Wireshark','Cisco NetAcad','Linux','Python','Splunk','Web Development','Blue Team','Costa Rica']
+    },
+    ja: {
+      pageTitle: 'Josue Hernandez — SOC Analyst & Web Developer',
+      metaDescription: 'ジュニアSOCアナリスト兼ジュニアWeb開発者。10のCisco認定を持つサイバーセキュリティ技術者。Escazú、コスタリカ。',
+      brandTitle: 'Josue Hernandez ポートフォリオ',
+      brandSubtitle: 'SOC Analyst & Web Dev',
+      navAbout: '自己紹介',
+      navCerts: '資格',
+      navWorks: 'プロジェクト',
+      navCv: '履歴書',
+      navContact: 'お問い合わせ',
+      heroEyebrow: '仕事募集中',
+      heroLine1: 'SOCジュニア',
+      heroLine2: 'ネットワーク',
+      heroLine3: 'サイバーセキュリティ',
+      heroLead: 'ジュニアSOCアナリスト兼ジュニアWeb開発者。Cisco NetAcadの認定資格を10件取得したサイバーセキュリティ技術者。スペイン語 — 英語B2。',
+      heroGeo: 'コスタリカ → 仕事募集中。',
+      heroCta: 'プロジェクトを見る',
+      heroStatus: '対応可能 · CR',
+      aboutIdx: '(01) — 自己紹介',
+      aboutTitle: 'テクノロジーは<br><em>いつも私の中に。</em>',
+      aboutP1: '私はコスタリカ出身の19歳、Josué Hernándezです。Universidad Castro Carazoのジュニアサイバーセキュリティ技術者です。子どもの頃からテクノロジーに情熱を持ち、特にSOCモニタリングとネットワークに強い関心があります。',
+      aboutP2: 'HTML、CSS、JavaScriptを使ったフロントエンド開発も行っています。論理的な思考、整理された作業、そして素早い学習力が強みです。',
+      skill1: 'SOCモニタリング',
+      skill2: 'Wireshark',
+      skill3: 'Nmap',
+      skill4: 'Splunk',
+      skill5: 'Python',
+      skill6: 'Linux',
+      skill7: 'TCP/IP',
+      skill8: 'DNS',
+      skill9: 'Cisco NetAcad',
+      skill10: 'HTML/CSS/JS',
+      skillsLab: '技術スキル',
+      skillItem1: 'ネットワークとプロトコル（Cisco）',
+      skillItem2: 'ログ分析とSIEM',
+      skillItem3: '脅威検知',
+      skillItem4: 'フロントエンド開発',
+      skillItem5: 'Python / スクリプト',
+      certsIdx: '(02) — 資格',
+      certsTitle: '資格',
+      certsIntro: 'これらは、サイバーセキュリティ、ネットワーク、Web開発の学習を支える資格と講座です。',
+      certsDrive: 'Google Driveですべて見る',
+      certStat1: '取得済み',
+      certStat2: '技術者',
+      certStat3: 'SOC',
+      certLink: '証明書を見る',
+      certTitle1: 'サイバーセキュリティ技術者',
+      certDesc1: 'Universidad Castro Carazoより授与。',
+      certTag1a: 'ネットワーク',
+      certTitle2: 'Junior Cybersecurity Analyst Career Path Exam',
+      certDesc2: 'セキュリティ、脅威、リスク、防御の重要概念。',
+      certTag2a: 'セキュリティ',
+      certTitle3: 'ネットワークサポートとセキュリティ',
+      certDesc3: '脅威、保護、ベストプラクティスの概要。',
+      certTag3a: 'ネットワーク',
+      certTag3b: 'セキュリティ',
+      certTag3c: '基礎',
+      certTitle4: 'ネットワークアドレッシングと基本トラブルシューティング',
+      certDesc4: 'ネットワークアドレッシングと基本トラブルシューティング。',
+      certTag4a: 'ネットワーク',
+      certTag4b: '講座',
+      certTitle5: 'ネットワーク防御',
+      certDesc5: 'ネットワークシミュレーションを用いたラボ実践。',
+      certTag5a: 'ラボ',
+      certTag5b: 'ネットワーク',
+      certTitle6: 'Introduction to Cybersecurity',
+      certDesc6: 'サイバーセキュリティ基礎の入門認定。',
+      certTag6a: 'システム',
+      certTitle7: 'エンドポイントセキュリティ',
+      certDesc7: 'デバイスとユーザー環境の保護。',
+      certTag7a: '自動化',
+      certTag7b: 'スクリプト',
+      certTitle8: 'サイバー脅威管理',
+      certDesc8: '脅威の理解、分析、対応。',
+      certTitle9: 'ネットワークの基本概念',
+      certDesc9: 'ネットワーク通信とプロトコルの基礎。',
+      certTag9a: '監視',
+      certTag9b: '分析',
+      certTitle10: 'ネットワーク機器と初期設定',
+      certDesc10: '基本設定、アクセス、初期管理。',
+      certTag10a: '検知',
+      certTag10b: '対応',
+      worksIdx: '(03) — プロジェクト',
+      worksTitle: 'プロジェクト',
+      worksIntro: 'GitHubですべてのプロジェクトを見る',
+      viewProject: 'プロジェクトを見る',
+      badgeInDev: '開発中',
+      work1Desc: 'Linuxログを分析し、SSHブルートフォース攻撃を自動検出するPythonスクリプト。疑わしいIPと推奨アクションを含むレポートを生成します。',
+      work2Desc: 'Wiresharkを使ってパケットを確認し、ネットワーク異常を検出するWebトラフィック分析ツール。',
+      work3Title: 'インシデントレポート — MITRE ATT&CK',
+      work3Desc: 'Blue Team Labs Onlineで模擬したインシデントの完全な調査。各攻撃戦術をMITRE ATT&CKフレームワークにマッピング。',
+      work4Title: '検知ルール — Splunk',
+      work4Desc: 'Splunk Freeでブルートフォース、ポートスキャン、DNSトンネリングを検出するSPLルール。テストケースと結果を記録。',
+      webDevTitle: 'Web開発',
+      work5Desc: '理髪店向けサイト：ギャラリー、サービス、WhatsAppでの予約受付。',
+      work6Desc: 'アドベンチャーツーリズム向けサイト。ユーザー体験を重視したモダンなデザイン。',
+      cvIdx: '(03) — 履歴書',
+      cvDownload: '⬇ 履歴書をダウンロード',
+      contactIdx: '(04) — お問い合わせ',
+      contactTitle: '常に挑戦する準備ができています<br><em>一緒に進めましょう。</em>',
+      contactSub: '新しい挑戦をいつでも歓迎します。話しましょう。',
+      contactCta: 'メールでお問い合わせ',
+      footerLocation: 'コスタリカ',
+      scrollCue: 'スクロール',
+      marqueeItems: ['SOC Analyst','サイバーセキュリティ','ログ分析','脅威検知','SIEM','Wireshark','Cisco NetAcad','Linux','Python','Splunk','Web開発','Blue Team','コスタリカ']
+    }
+  };
+
+  function setLanguage(lang){
+    currentLang = lang;
+    localStorage.setItem('portfolio-lang', lang);
+    applyTranslations();
+  }
+
+  function applyTranslations(){
+    var langData = translations[currentLang] || translations.es;
+    document.documentElement.lang = currentLang;
+    document.title = langData.pageTitle;
+    var desc = document.querySelector('meta[name="description"]');
+    if(desc) desc.setAttribute('content', langData.metaDescription);
+
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var key = el.getAttribute('data-i18n');
+      if(langData[key] !== undefined){ el.textContent = langData[key]; }
+    });
+
+    document.querySelectorAll('[data-i18n-html]').forEach(function(el){
+      var key = el.getAttribute('data-i18n-html');
+      if(langData[key] !== undefined){ el.innerHTML = langData[key]; }
+    });
+
+    var toggle = document.getElementById('langToggle');
+    if(toggle){
+      toggle.innerHTML = '🌐 ' + currentLang.toUpperCase();
+    }
+
+    document.querySelectorAll('.lang-option').forEach(function(opt){
+      opt.classList.toggle('active', opt.getAttribute('data-lang') === currentLang);
+    });
+
+    var scrollCue = document.querySelector('.scrollcue span');
+    if(scrollCue && langData.scrollCue){ scrollCue.textContent = langData.scrollCue; }
+
+    var mq = document.getElementById('mq');
+    if(mq){
+      var items = langData.marqueeItems || translations.es.marqueeItems;
+      var seq = items.concat(items);
+      var html = '';
+      seq.forEach(function(t){ html += '<span>' + t + '</span><span class="sep">/</span>'; });
+      mq.innerHTML = html + html;
+    }
+  }
+
+  /* year + clocks */
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  function fmt(tz){
+    try{
+      return new Intl.DateTimeFormat('en-GB',{
+        hour:'2-digit',minute:'2-digit',second:'2-digit',
+        hour12:false,timeZone:tz
+      }).format(new Date());
+    } catch(e){
+      return new Intl.DateTimeFormat('en-GB',{
+        hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false
+      }).format(new Date());
+    }
+  }
+
+  function tick(){
+    document.getElementById('ckCR').textContent = fmt('America/Costa_Rica');
+    document.getElementById('ckYou').textContent = fmt(Intl.DateTimeFormat().resolvedOptions().timeZone);
+  }
+  tick(); setInterval(tick, 1000);
+
+  window.addEventListener('load', function(){ setTimeout(function(){ document.body.classList.add('go'); }, 120); });
+  setTimeout(function(){ document.body.classList.add('go'); }, 700);
+
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        e.target.querySelectorAll('.bar i').forEach(function(b){
+          b.style.width = (b.getAttribute('data-w') || 0) + '%';
+        });
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold:0.18, rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  var prog = document.getElementById('prog'),
+      glow = document.querySelector('.hero-glow'),
+      vid  = document.querySelector('.hero-video'),
+      medias = [].slice.call(document.querySelectorAll('.work-media img'));
+  var ticking = false;
+  function onScroll(){
+    if(ticking) return; ticking = true;
+    requestAnimationFrame(function(){
+      var y = window.scrollY, h = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.width = (h > 0 ? (y/h*100) : 0) + '%';
+      var p = y * 0.25;
+      if(glow) glow.style.transform = 'translateY('+p+'px)';
+      if(vid)  vid.style.transform  = 'translateY('+(y*0.12)+'px)';
+      medias.forEach(function(img){
+        var r = img.getBoundingClientRect();
+        var off = (r.top + r.height/2 - window.innerHeight/2) / window.innerHeight;
+        img.style.transform = 'translateY('+(-6 + off*-5)+'%)';
+      });
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+    var cur = document.getElementById('cur'), ring = document.getElementById('ring');
+    var rx = 0, ry = 0, mx = 0, my = 0;
+    document.addEventListener('mousemove', function(e){
+      mx = e.clientX; my = e.clientY;
+      cur.style.opacity = '1'; ring.style.opacity = '1';
+      cur.style.transform = 'translate('+mx+'px,'+my+'px) translate(-50%,-50%)';
+    });
+    (function loop(){
+      rx += (mx-rx)*0.16; ry += (my-ry)*0.16;
+      ring.style.transform = 'translate('+rx+'px,'+ry+'px) translate(-50%,-50%)';
+      requestAnimationFrame(loop);
+    })();
+    document.querySelectorAll('a,button,.work,summary,.srow').forEach(function(el){
+      el.addEventListener('mouseenter', function(){
+        ring.style.width='60px'; ring.style.height='60px';
+        ring.style.borderColor='var(--accent)';
+      });
+      el.addEventListener('mouseleave', function(){
+        ring.style.width='34px'; ring.style.height='34px';
+        ring.style.borderColor='rgba(236,231,223,.5)';
+      });
+    });
+  }
+
+  var nav = document.getElementById('nav'), burger = document.getElementById('burger');
+  if(burger){
+    burger.addEventListener('click', function(){ nav.classList.toggle('open'); });
+  }
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ nav.classList.remove('open'); });
+  });
+
+  var langToggle = document.getElementById('langToggle');
+  var langMenu = document.getElementById('langMenu');
+  if(langToggle && langMenu){
+    langToggle.addEventListener('click', function(e){
+      e.stopPropagation();
+      langMenu.classList.toggle('open');
+    });
+    document.querySelectorAll('.lang-option').forEach(function(opt){
+      opt.addEventListener('click', function(){
+        setLanguage(opt.getAttribute('data-lang'));
+        langMenu.classList.remove('open');
+      });
+    });
+    document.addEventListener('click', function(){ langMenu.classList.remove('open'); });
+  }
+
+  applyTranslations();
+})();
+</script>
+</body>
+</html>
